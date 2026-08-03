@@ -22,3 +22,11 @@ class Stack:
     def size(self):
         return len(self.items)
 
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i, num1 in enumerate(nums):
+            for j, num2 in enumerate(nums):
+                if i==j:
+                    continue
+                elif num1 + num2 == target:
+                    return i, j
